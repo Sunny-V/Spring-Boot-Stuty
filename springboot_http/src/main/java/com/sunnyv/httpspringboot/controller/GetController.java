@@ -46,7 +46,6 @@ public class GetController {
         params.clear();
         params.put("from", from);
         params.put("size", size);
-
         return params;
 
     }

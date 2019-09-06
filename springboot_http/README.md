@@ -249,6 +249,7 @@ public class OtherHttpController {
 ```
 
 <a name="EU4YI"></a>
+
 ### 常用json框架介绍和Jackson返回结果处理
 1.常用框架 阿里 fastjson,谷歌gson等<br /> JavaBean序列化为Json，性能：Jackson > FastJson > Gson > Json-lib 同个结构<br /> Jackson、FastJson、Gson类库各有优点，各有自己的专长<br /> 空间换时间，时间换空间<br />	2.jackson处理相关自动<br /> 指定字段不返回：@JsonIgnore<br /> 指定日期格式：@JsonFormat(pattern="yyyy-MM-dd hh:mm:ss",locale="zh",timezone="GMT+8")<br /> 空字段不返回：@JsonInclude(Include.NON_NUll)<br /> 指定别名：@JsonProperty
 
@@ -283,3 +284,13 @@ public class JsonConvertController {
 ```
 
 ![image.png](https://cdn.nlark.com/yuque/0/2019/png/408886/1565882673507-8793f9dc-980c-41b2-87d8-536bb253aae7.png#align=left&display=inline&height=82&name=image.png&originHeight=103&originWidth=468&size=5586&status=done&width=374.4)<br />**测试结果**<br />**<br />**
+
+### 热部署
+
+导入依赖的jar包
+
+`<dependency>   <groupId>org.springframework.boot</groupId>   <artifactId>spring-boot-devtools</artifactId></dependency>`
+
+测试，每次修改源码保存都会自动重启项目
+
+spring.devtools.restart.exclude指定哪些文件不进行更新
